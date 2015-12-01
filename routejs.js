@@ -12,25 +12,36 @@ mbApp.config(function($routeProvider){
         controller: 'mainCtrl'
     }).when('/contact', {
         templateUrl: 'pages/contact.html',
-        controller: 'mainCtrl'
+        controller: 'contactCtrl'
     }).otherwise({
             redirectTo: '/'
         }
     );
 });
 
-mbApp.controller('mainCtrl', function(){
+mbApp.controller('mainCtrl', function($scope){
     this.nav = [{
-        title: 'home',
+        title: 'Welcome',
         loc: '#/'
     }, {
-        title: 'our_macarons',
+        title: 'Our Macarons',
         loc: '#/our_macarons'
     }, {
-        title: 'gifts_parties',
+        title: 'Gifts Parties',
         loc: '#/gifts_parties'
     },{
-        title: 'contact',
+        title: 'Contact',
         loc: '#/contact'
     }];
+}).controller('ourCtrl', function($scope) {
+
+}).controller('giftsCtrl', function($scope) {
+
+}).controller('contactCtrl', function($scope){
+    this.list = [
+        'Monday - Friday | 10am - 9pm',
+        'Saturday | 10am - 8pm',
+        'Sunday | 11am - 7pm',
+        'closed Thanksgiving Day, Christmas Day and Easter Day'
+    ];
 });
