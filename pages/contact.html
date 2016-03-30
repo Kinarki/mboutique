@@ -1,0 +1,45 @@
+<div type="text/ng-template">
+    <img src="assets/images/contact-image.png" class="img-responsive contact-image">
+
+    <div class="container col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12  main-content contact-page" ng-controller="contactCtrl as cc">
+
+        <section class="col-xs-10 col-sm-4 visit-section">
+            <h1>Visit Us!</h1>
+
+            <ul class="list-group contact-ul" ng-repeat="days in cc.list">
+                <li class="list-group-item contact-li">{{ days }}</li>
+            </ul>
+
+            <address><br class="visible-xs">
+                1625 Post St <br>
+                San Francisco, CA 94115 <br>
+            </address>
+
+            <p>949.800-311</p>
+
+            <p><span>order@mboutique.com</span></p>
+
+            <p>Send your questions, comments and flavor suggestions or place an order!</p>
+        </section>
+
+        <div class="visible-xs hr col-xs-pull-1"></div>
+
+        <section class="col-xs-12 col-sm-4 form-section">
+            <h1>Contact form</h1>
+
+            <form class="form" name="form" method="post" action="MAILTO: order@mboutique.com">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+                <input type="text" class="form-control" name="subject" placeholder="Subject">
+                <textarea class="form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+                <button class="btn col-xs-offset-6" type="submit" name="send" id="send" value="Send">Send</button>
+            </form>
+        </section>
+
+        <section>
+            <img src="assets/images/macarons-image.png" class="img-responsive hidden-xs macarons">
+        </section>
+
+    </div>
+</div>
